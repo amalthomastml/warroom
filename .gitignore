@@ -1,3 +1,11 @@
-echo "**/ .terraform/" > .gitignore
-echo "*.tfstate" >> .gitignore
-echo ".terraform.lock.hcl" >> .gitignore
+# Block ALL hidden .terraform folders globally
+**/.terraform/
+.terraform/
+
+# Block state track databases
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Block secrets
+*.tfvars
